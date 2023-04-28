@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'press-start';
+    src: url(fonts/PressStart2P-Regular.ttf);
+}
+
+hr {
+    width: 100vw;
+    height: 21px;
+    border-bottom: 10px solid white;
+    border-top: 10px solid white;
+    background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(220, 220, 220, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+* {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    background: url(images/WallpaperDog.jpg) no-repeat fixed;
+    background-size: cover;
+    width: 100vw;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+        "nav"
+        "hr-1"
+        "main"
+        "hr-4"
+        "footer";
+}
+
+
+
+/* Following properties are about nav-bar */
+#nav-bar {
+    height: max-content;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 25% 75%;
+    grid-template-areas: "nav-a nav-b";
+    background-image: url(images/fancy-pants.jpg);
+    background-size: 97%;
+    grid-area: nav;
+
+}
+
+#logo {
+    grid-area: nav-a;
+    max-height: 100%;
+    padding: 30px 0;
+
+}
+
+#logo a {
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo a img {
+    height: 11vh;
+
+}
+
+#logo a p {
+    text-align: center;
+    font-family: 'press-start';
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+#menu {
+
+    grid-area: nav-b;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: white;
+}
+
+#menu li {
+    width: auto;
+    margin: 20px;
+    padding-right: 5px;
+    display: grid;
+}
+
+.category-home {
+    padding: 5px 0 5px 10px;
+    margin-bottom: 10px;
+    font-family: 'press-start';
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+#sith-link,
+#rebels-link {
+    border-bottom: 4px solid red;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+#jedi-link,
+#empire-link {
+    border-bottom: 4px solid #B4E4F7;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.category-list {
+    padding: 5px 0 5px 5px;
+}
+
+.category-list li {
+    margin: 0 !important;
+    padding: 5px 0 5px 5px;
+}
+
+.category-list li a {
+    font-size: 1rem;
+    color: inherit;
+    text-align: justify;
+}
+
+/* End of properties about nav-bar */
+
+#divider-1 {
+    grid-area: hr-1;
+}
+
+#divider-2 {
+    grid-area: hr-2;
+}
+
+#divider-3 {
+    grid-area: hr-3;
+}
+
+#divider-4 {
+    grid-area: hr-4;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content max-content max-content max-content;
+    grid-template-areas:
+        "main-1"
+        "hr-2"
+        "main-2"
+        "hr-3"
+        "main-3";
+}
+
+/* The following properties are about the 4 characters images */
+
+#personnages {
+    grid-area: main-1;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-areas: "p-1 p-2 p-3 p-4";
+}
+
+#perso-1 {
+    grid-area: p-1;
+}
+
+#perso-2 {
+    grid-area: p-2;
+}
+
+#perso-3 {
+    grid-area: p-3;
+}
+
+#perso-4 {
+    grid-area: p-4;
+}
+
+.perso {
+    height: 32vw;
+    width: 100%;
+    z-index: 0;
+}
+
+.img-border {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 83%;
+    height: 90%;
+    border-radius: 1vw;
+    background-color: rgba(200, 200, 200, 0.4);
+}
+
+.perso-img {
+    height: 99%;
+    width: 95%;
+    z-index: 5;
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(200, 200, 200, 0) 0.01%, rgba(200, 200, 200, 0) 99.9%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: 0px 0px 1px 1px rgba(100, 100, 100, 0.4);
+    border: none;
+}
+
+/* End of properties about characters images */
+
+/* The following properties are about the "Lorem" sentence. */
+
+#citation {
+    grid-area: main-2;
+    width: 100vw;
+    background: url(images/fancy-pants.jpg) fixed;
+    background-size: 100%;
+
+}
+
+#citation p {
+    color: white;
+    font-family: press-start;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 100px 0;
+    line-height: 3rem;
+}
+
+/* End of properties about "Lorem" sentence. */
+
+/* The following properties are about the "advertising" section. */
+
+#advertising {
+    height: 150px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "ad-1 ad-2 ad-4"
+        "ad-1 ad-3 ad-4";
+}
+
+.ad-block {
+    width: 100%;
+    height: 100%;
+}
+
+#ad-1 {
+    grid-area: ad-1;
+    background-color: blue;
+}
+
+#ad-2 {
+    grid-area: ad-2;
+    background-color: yellow;
+}
+
+#ad-3 {
+    grid-area: ad-3;
+    background-color: green;
+}
+
+#ad-4 {
+    grid-area: ad-4;
+    border-color: purple;
+}
