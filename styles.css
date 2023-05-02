@@ -18,8 +18,18 @@
     src: url(fonts/Roboto-Italic.ttf);
 }
 
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'olive-mono-regular';
+    src: url(fonts/BPmono.ttf);
+}
+
 hr {
-    width: 100vw;
+    width: 99.1vw;
     height: 21px;
     border-bottom: 10px solid white;
     border-top: 10px solid white;
@@ -27,7 +37,7 @@ hr {
 }
 
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
     bottom: 0;
@@ -38,13 +48,13 @@ hr {
 }
 
 html {
-    width: 100vw;
+    width: 99.1vw;
 }
 
 body {
-    background: url(images/WallpaperDog.jpg) no-repeat fixed;
+    background: url(images/WallpaperDog.jpg) left no-repeat fixed;
     background-size: cover;
-    width: 100vw;
+    width: 99.1vw;
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr;
@@ -62,12 +72,12 @@ body {
 /* Following properties are about nav-bar */
 #nav-bar {
     height: max-content;
-    width: 100vw;
+    width: 99.1vw;
     display: grid;
     grid-template: 1fr / 25% 75%;
     grid-template-areas: "nav-a nav-b";
     background-image: url(images/fancy-pants.jpg);
-    background-size: 97%;
+    background-size: 100%;
     grid-area: nav;
 
 }
@@ -75,7 +85,7 @@ body {
 #logo {
     grid-area: nav-a;
     max-height: 100%;
-    padding: 30px 0;
+    padding: 18px 0;
 
 }
 
@@ -114,9 +124,8 @@ body {
 
 #menu li {
     width: auto;
-    margin: 20px;
+    margin: 20px 20px 0 20px;
     padding-right: 5px;
-    display: grid;
 }
 
 .category-home {
@@ -125,6 +134,9 @@ body {
     font-family: 'press-start';
     color: inherit;
     font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 #sith-link,
@@ -175,6 +187,7 @@ body {
 }
 
 main {
+    width: 99.1vw;
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
@@ -191,8 +204,10 @@ main {
 
 #personnages {
     grid-area: main-1;
-    width: 100vw;
+    width: 100%;
+    padding: 30px;
     display: grid;
+    gap: 80px 80px;
     grid-template: 1fr / 1fr 1fr 1fr 1fr;
     grid-template-areas: "p-1 p-2 p-3 p-4";
 }
@@ -214,30 +229,25 @@ main {
 }
 
 .perso {
-    height: 32vw;
+    height: 29.5vw;
     width: 100%;
     z-index: 0;
 }
 
 .img-border {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 83%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 1vw;
     background-color: rgba(200, 200, 200, 0.4);
 }
 
 .perso-img {
-    height: 99%;
-    width: 95%;
+    height: 95%;
     z-index: 5;
     position: relative;
-    top: 0%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(200, 200, 200, 0) 0.01%, rgba(200, 200, 200, 0) 99.9%, rgba(0, 0, 0, 0.4) 100%);
     box-shadow: 0px 0px 1px 1px rgba(100, 100, 100, 0.4);
     border: none;
@@ -249,9 +259,10 @@ main {
 
 #citation {
     grid-area: main-2;
-    width: 100vw;
+    width: 99vw;
     background: url(images/fancy-pants.jpg) fixed;
     background-size: 100%;
+    padding: 0 30px;
 
 }
 
@@ -259,9 +270,9 @@ main {
     color: white;
     font-family: press-start;
     text-align: center;
-    font-size: 1.4rem;
-    margin: 100px 0;
-    line-height: 3rem;
+    font-size: 1.3rem;
+    margin: 75px 0;
+    line-height: 2.6rem;
 }
 
 /* End of properties about "Lorem" sentence. */
@@ -270,6 +281,8 @@ main {
 
 
 #advertising {
+    width: 100%;
+    padding: 28px 50px;
     display: grid;
     grid-template-columns: 24.8% 25.6% 49.6%;
     grid-template-rows: 1fr 1fr;
@@ -277,6 +290,7 @@ main {
         "ad1 ad2 ad4"
         "ad1 ad3 ad4";
     height: max-content;
+    background-color: white;
 }
 
 .orange-text {
@@ -302,9 +316,9 @@ main {
 /* The following properties are about the "Welcome" section. */
 #ad-12 {
     grid-area: ad1;
-    background-color: white;
-    padding: 30px 0;
+    padding: 20px 0;
     height: fit-content;
+    border: 1px solid grey;
 }
 
 #ad-1-cadre {
@@ -312,7 +326,7 @@ main {
     height: fit-content;
     position: relative;
     top: 50%;
-    left: 10%;
+    left: 5%;
     display: block;
     text-align: left;
 }
@@ -325,7 +339,7 @@ main {
 #ad-1-cadre a {
     display: block;
     height: auto;
-    padding: 28px 0 80px 0;
+    padding: 28px 0 50px 0;
     text-decoration: underline;
 }
 
@@ -335,8 +349,7 @@ main {
 
 #ad-22 {
     grid-area: ad2;
-    background-color: white;
-    padding: 30px 0 0 32px;
+    padding: 20px 0 0 32px;
 }
 
 /* End of properties about "lastest works" section. */
@@ -345,17 +358,280 @@ main {
 
 #ad-32 {
     grid-area: ad3;
-    background-color: white;
-    padding: 70px 0 0 32px;
+    padding: 3.68vw 0 0 32px;
 }
 
 
 /* End of properties about the "our products" section. */
 
 
+/* Following properties are about the "flexible-pages" section */
+
 #ad-42 {
     grid-area: ad4;
-    background-color: purple;
+    padding: 20px 0 0 0;
 }
 
+
+
+#video {
+    width: 45vw;
+    height: 25vw;
+}
+
+/* End of "flexible-pages" section. */
+
 /* End of properties about the "advertising" section. */
+
+
+/* Following properties are about the footer */
+
+
+footer {
+    width: 97vw;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: calc((100vw - 300px) / 4) 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 75px;
+    grid-template-areas:
+        "f-1 f-2 f-3 f-4";
+    color: white;
+    font-family: 'roboto-light';
+}
+
+.footer-div {
+    height: max-content;
+}
+
+.footer-div h2 {
+    font-family: 'roboto';
+    font-size: 1rem;
+    padding: 10px 0 15px 0;
+    width: fit-content;
+    margin: 0;
+}
+
+/* Following properties are about the "contact details" section, in the footer. */
+
+.footer-1 {
+    grid-area: f-1;
+}
+
+.footer-1 ul {
+    padding-bottom: 20px;
+    font-size: 1rem;
+}
+
+.footer-1 ul li {
+    padding: 5px 0;
+}
+
+.footer-1 a {
+    color: white;
+}
+
+/* End of "contact details" section. */
+
+/* Following properties are about the "find us" section, in the footer. */
+
+.footer-2 {
+    grid-area: f-2;
+}
+
+/* End of "find us" section. */
+
+/* Following properties are about the "contact us" section, in the footer. */
+
+
+.footer-3 {
+    grid-area: f-3;
+    padding-left: 20px;
+}
+
+.footer-3 form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 5px;
+}
+
+input,
+textarea,
+button {
+    border-radius: 5px;
+    border: none;
+}
+
+label {
+    margin-top: 4px;
+}
+
+button {
+    width: 77px;
+    height: 34px;
+    margin-top: 8px;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-3 form input {
+    height: 33px;
+    width: 100%;
+    padding: 5px;
+}
+
+.footer-3 form textarea {
+    height: 48px;
+    width: 100%;
+    padding: 10px;
+    font-family: 'olive-mono-regular';
+    font-size: 0.8rem;
+}
+
+/* End of "contact us" section. */
+
+/* Following properties are about the "widgetized footer" section. */
+
+.footer-4 {
+    grid-area: f-4;
+    display: inline-block;
+}
+
+@media (max-width:1500px) {
+
+    footer {
+        width: 100%;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: calc((100vw - 300px) / 4) 300px auto auto;
+        grid-template-rows: 1fr;
+        gap: 0px 75px;
+        grid-template-areas:
+            "f-1 f-2 f-3 f-4";
+    }
+
+    .footer-2 {
+        width: 300px;
+    }
+}
+
+@media (max-width:900px) {
+
+    html {
+        margin: 0 !important;
+    }
+
+    body {
+        background: url(images/WallpaperDog.jpg) center no-repeat fixed;
+        background-size: cover;
+    }
+
+    #personnages {
+        grid-template: 1fr 1fr / 1fr 1fr;
+        gap: 80px 80px;
+        grid-template-areas:
+            "p-1 p-2"
+            "p-3 p-4";
+    }
+
+
+    .perso {
+        height: 60vw;
+    }
+
+    #nav-bar {
+        height: max-content;
+        width: 99.1vw;
+        display: grid;
+        grid-template: 1fr / 25% 75%;
+        grid-template-areas: "nav-a nav-b";
+        background-image: url(images/fancy-pants.jpg);
+        background-size: 100%;
+        grid-area: nav;
+
+    }
+
+    #logo {
+        padding: 40px 0 0 40px;
+    }
+
+    #logo a {
+        height: 90%;
+    }
+
+    #logo a img {
+        height: 10vh;
+    }
+
+    #logo a p {
+        font-size: 1.1rem;
+    }
+
+    #menu {
+        grid-area: nav-b;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        color: white;
+    }
+
+    #menu li {
+        margin: 0;
+        padding-right: 15px;
+    }
+
+    .category-home {
+        padding: 15px 0 5px 10px;
+        margin-bottom: 10px;
+    }
+
+    #sith-link,
+    #rebels-link {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    #jedi-link,
+    #empire-link {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .category-list li a {
+        font-size: 0.7rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #advertising {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr max-content;
+        gap: 0px 0px;
+        grid-template-areas:
+            "ad1 ad2"
+            "ad1 ad3"
+            "ad4 ad4";
+    }
+
+    #video {
+        width: 100%;
+        height: 50vw;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: auto minmax(300px, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 50px 50px;
+        grid-template-areas:
+            "f-1 f-2"
+            "f-3 f-4";
+
+    }
+}

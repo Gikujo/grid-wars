@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document en cours</title>
 </head>
 
@@ -60,7 +61,7 @@
                 <ul class="category-list" id="empire-list">
                     <li><a href="#product-category-1">Product Category 1</a></li>
                     <li><a href="#product-category-2">Product Category 2</a></li>
-                    <li><a href="#product-category-3">Product Category 3</a></li>
+                    <li><a href="#product-category-3">Custom Templates</a></li>
 
                 </ul>
             </li>
@@ -123,7 +124,7 @@
             </div>
 
             <div id="ad-22" class="adv">
-                <h2 id="lastest-works" class="orange-text">LASTEST-WORKS</h2>
+                <h2 id="lastest-works" class="orange-text">LASTEST WORKS</h2>
                 <p class="italic">Lorem ipsum dolor sit amet</p>
                 <p class="normal-text">Novi debent autem Indigna multos teneros digni amici ferunt veterrima quaeque
                     debet sicut esse
@@ -140,6 +141,14 @@
 
 
             <div id="ad-42" class="adv">
+                <div id="flexible-pages">
+                    <h2 class="orange-text">FLEXIBLE PAGES</h2>
+                    <p class="italic">Lorem ipsum dolor sit amet</p>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6JX5OW8cOec"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen id="video"></iframe>
             </div>
         </section>
 
@@ -148,8 +157,47 @@
     <hr id="divider-4" class="divider">
 
     <footer>
+        <div id="contact" class="footer-div footer-1">
+            <h2>CONTACT DETAILS</h2>
+            <ul class="contact-details">
+                <li><i class="fas fa-home"></i> 63739 street lorem ipsum<br />
+                    City, Country</li>
+                <li><i class="fas fa-headset"></i> +1 123 312 32 23</li>
+                <li><a href="#info-mail" class="footer-link"><i class="fas fa-envelope"></i> info@company.com</li></a>
+                <li><a href="support-mail" class="footer-link"><i class="fas fa-life-ring"></i> support@company.com
+                </li></a>
+            </ul>
+        </div>
+        <div id="find" class="footer-div footer-2">
+            <h2>WHERE FIND US</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93088.5905901959!2d5.547502506750827!3d43.18812358816122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9af63ace8b8e5%3A0x40819a5fd9703d0!2s13600%20La%20Ciotat!5e0!3m2!1sfr!2sfr!4v1683018662390!5m2!1sfr!2sfr"
+                width="300" height="148" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+        </div>
+        <div id="contact-form" class="footer-div footer-3">
+            <h2>CONTACT US</h2>
+            <form method="POST" action="post-contact.php">
+                <label for="email" id="email-label">
+                    Your Email
+                </label>
+                <input type="email" name="email" id="email" placeholder="Your name..">
+                <label for="message" id="message-label">
+                    Subject
+                </label>
+                <textarea name="message" id="message" placeholder="Write something..." rows="2" cols="40"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <id="widgetized" class="footer-div footer-4">
+            <h2>WIDGETIZED FOOTER</h2>
+            <img src="images/casque1.jpg" alt="mandalorian and storm tropper's helmets">
+            <img src="images/casque2.jpg" alt="only storm tropper's helmets">
+
+            </div>
     </footer>
+
 
 </body>
 
