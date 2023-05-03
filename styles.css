@@ -740,19 +740,11 @@ button:hover {
         right: 14%;
     }
 
-    .burger-icon {}
-
     .burger-icon span {
         display: block;
         width: 38px;
         height: 5px;
         background-color: white;
         margin: 6px 0;
-    }
-
-    #openBtn:active {
-        .burger-icon span {
-            display: none;
-        }
     }
 }
