@@ -34,6 +34,7 @@ hr {
     border-bottom: 10px solid white;
     border-top: 10px solid white;
     background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(220, 220, 220, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    z-index: 0;
 }
 
 * {
@@ -79,13 +80,15 @@ body {
     background-image: url(images/fancy-pants.jpg);
     background-size: 100%;
     grid-area: nav;
+    box-shadow: 12px 12px 20px -13px #000000;
+    z-index: 1;
 
 }
 
 #logo {
     grid-area: nav-a;
     max-height: 100%;
-    padding: 18px 0;
+    padding: 20px 0;
 
 }
 
@@ -111,6 +114,10 @@ body {
     color: white;
     font-size: 1.3rem;
     margin-top: 20px;
+}
+
+#openBtn {
+    display: none;
 }
 
 #menu {
@@ -243,7 +250,7 @@ main {
 
 .perso-img {
     height: 95%;
-    z-index: 5;
+    z-index: 2;
     position: relative;
     top: 50%;
     left: 50%;
@@ -262,7 +269,7 @@ main {
     width: 99vw;
     background: url(images/fancy-pants.jpg) fixed;
     background-size: 100%;
-    padding: 0 30px;
+    padding: 75px 30px;
 
 }
 
@@ -271,7 +278,6 @@ main {
     font-family: press-start;
     text-align: center;
     font-size: 1.3rem;
-    margin: 75px 0;
     line-height: 2.6rem;
 }
 
@@ -309,7 +315,7 @@ main {
 
 .italic {
     font-family: roboto-italic;
-    padding: 8px 0;
+    padding: 2px 0;
     color: #C1C1C1;
 }
 
@@ -608,6 +614,12 @@ button:hover {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    #citation {
+        padding: 90px 50px;
+        background-size: 180%;
+        background-position: top;
+    }
+
     #advertising {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -633,5 +645,114 @@ button:hover {
             "f-1 f-2"
             "f-3 f-4";
 
+    }
+}
+
+@media (max-width:600px) {
+
+    html,
+    body,
+    #nav-bar,
+    main,
+    footer,
+    hr,
+    #citation {
+        width: 100%;
+        /* Cette propriété sert à ce que le contenu ne dépasse pas de la page horizontalement. */
+    }
+
+    #nav-bar {
+        display: block;
+        height: 200px;
+    }
+
+    #logo {
+        padding: 10px 0 0 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #logo a img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #logo a p {
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #personnages {
+        grid-template: 1fr 1fr 1fr 1fr / 1fr;
+        row-gap: 80px;
+        column-gap: 0;
+        grid-template-areas:
+            "p-1"
+            "p-2"
+            "p-3"
+            "p-4";
+    }
+
+    .perso {
+        height: 120vw;
+    }
+
+    .perso-img {
+        width: 95%;
+    }
+
+    footer {
+        display: grid;
+        grid-template: repeat(4, max-content) / 1fr;
+        row-gap: 80px;
+        column-gap: 0;
+        grid-template-areas:
+            "f-1"
+            "f-2"
+            "f-3"
+            "f-4";
+    }
+
+    #advertising {
+        display: block;
+    }
+
+    #ad-22,
+    #ad-32 {
+        padding-left: 0;
+    }
+
+    .footer-3 {
+        padding-left: 0;
+    }
+
+    /* ----- MENU BURGER ----- */
+
+    #openBtn {
+        display: flex;
+        position: absolute;
+        top: 25px;
+        right: 14%;
+    }
+
+    .burger-icon {}
+
+    .burger-icon span {
+        display: block;
+        width: 38px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    #openBtn:active {
+        .burger-icon span {
+            display: none;
+        }
     }
 }
